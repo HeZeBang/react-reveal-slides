@@ -129,7 +129,7 @@ function App() {
   const [theme, setTheme] = useState("black")
   const [presState, setPresState] = useState({"indexh": -1, "indexv": -1, "indexf": -1, "paused": false, "overview": false })
   const [useCustomTheme] = useState(false);
-  const [controlsLayout] = useState<"edges" | "bottom-right" | undefined>("edges");
+  const [controlsLayout] = useState<"edges" | "bottom-right" | undefined>("bottom-right");
   const [headerFontColor, setHeaderFontColor] = useState("white");
   const [headerOpacity, setHeaderOpacity] = useState(0);
   const [headerVisible, setHeaderVisible] = useState<CSSProperties["visibility"]>("hidden");
@@ -236,7 +236,7 @@ function App() {
           </a>
         </div>
       </div>
-      <RevealSlides key="rs-2" scrollSnap="proximity" minScale={1} maxScale={1} transition="slide" width={"100%"} margin={0.01} view="scroll" controlsLayout={controlsLayout} presState={presState} plugins={[RevealZoom, RevealNotes]} theme={theme} onStateChange={handleOnStateChange}  >
+      <RevealSlides key="rs-2" scrollSnap="proximity" minScale={1} maxScale={1} transition="slide" width={"100%"} margin={0.01}  controlsLayout={controlsLayout} presState={presState} plugins={[RevealZoom, RevealNotes]} theme={theme} onStateChange={handleOnStateChange}  >
         <section key="0">
           <section key="0-0" data-auto-animate data-background-color="#0c1821">
             <div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", width: "100vw", height: "100vh"}}>
